@@ -11,6 +11,7 @@ import Combine
 
 class TaskCellViewModel: ObservableObject, Identifiable{
     
+    @Published var taskRepo = TaskRepo()
     @Published var task: Task
     
     var id = ""
@@ -29,10 +30,19 @@ class TaskCellViewModel: ObservableObject, Identifiable{
         .store(in: &cancellables)
         
         $task
-            .map { task in
+            .compactMap { task in
                 task.id
         }
         .assign(to: \.id, on: self)
+        .store(in: &cancellables)
+        
+        // Update Tasks
+        $task
+            .dropFirst()
+            .debounce(for: 0.8, scheduler: RunLoop.main) //Waits 0.8 seconds to register the update in FS
+            .sink { task in
+                self.taskRepo.updateTask(task)
+        }
         .store(in: &cancellables)
     }
 }

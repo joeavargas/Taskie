@@ -15,6 +15,7 @@
 		E3406BD524DA7DBB00F204C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3406BD424DA7DBB00F204C3 /* Assets.xcassets */; };
 		E3406BD824DA7DBB00F204C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3406BD724DA7DBB00F204C3 /* Preview Assets.xcassets */; };
 		E3406BDB24DA7DBB00F204C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3406BD924DA7DBB00F204C3 /* LaunchScreen.storyboard */; };
+		E34C379C24DB73910018E0AC /* TaskRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C379B24DB73910018E0AC /* TaskRepo.swift */; };
 		E36614AC24DA813000B10B77 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36614AB24DA813000B10B77 /* Task.swift */; };
 		E36614B124DAB3C300B10B77 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36614B024DAB3C300B10B77 /* TaskCellViewModel.swift */; };
 		E36614B324DAB5A600B10B77 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36614B224DAB5A600B10B77 /* TaskListViewModel.swift */; };
@@ -32,6 +33,7 @@
 		E3406BD724DA7DBB00F204C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3406BDA24DA7DBB00F204C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3406BDC24DA7DBB00F204C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34C379B24DB73910018E0AC /* TaskRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepo.swift; sourceTree = "<group>"; };
 		E36614AB24DA813000B10B77 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E36614B024DAB3C300B10B77 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
 		E36614B224DAB5A600B10B77 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		E3406BCD24DA7DBB00F204C3 /* Taskie */ = {
 			isa = PBXGroup;
 			children = (
+				E34C379A24DB73700018E0AC /* Repositories */,
 				E36614AF24DAB3AB00B10B77 /* ViewModels */,
 				E36614AD24DA820D00B10B77 /* App */,
 				E36614AA24DA812300B10B77 /* Model */,
@@ -107,6 +110,14 @@
 				E3406BD724DA7DBB00F204C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E34C379A24DB73700018E0AC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E34C379B24DB73910018E0AC /* TaskRepo.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		E36614AA24DA812300B10B77 /* Model */ = {
@@ -265,6 +276,7 @@
 				E3406BD324DA7DBB00F204C3 /* TaskListView.swift in Sources */,
 				E36614B124DAB3C300B10B77 /* TaskCellViewModel.swift in Sources */,
 				E36614B324DAB5A600B10B77 /* TaskListViewModel.swift in Sources */,
+				E34C379C24DB73910018E0AC /* TaskRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
