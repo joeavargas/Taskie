@@ -10,15 +10,26 @@ import SwiftUI
 
 struct TaskListView: View {
     
+    @ObservedObject var taskListViewModel = TaskListViewModel()
     let tasks = testDataTasks
+    
+    @State var presentAddNewItem = false
     
     var body: some View {
         NavigationView{
             VStack(alignment: .leading){
-                List(tasks){ task in
-                    TaskCell(task: task)
+                List{
+                    ForEach(taskListViewModel.taskCellViewModels){ taskCellViewModel in
+                        TaskCell(taskCellViewModel: taskCellViewModel)
+                    }
+                    if presentAddNewItem{
+                        TaskCell(taskCellViewModel: TaskCellViewModel(task: Task(title: "", completed: false))){ task in
+                            self.taskListViewModel.addTask(task: task)
+                            self.presentAddNewItem.toggle()
+                        }
+                    }
                 }
-                Button(action: {}){
+                Button(action: {self.presentAddNewItem.toggle()}){
                     HStack{
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -40,13 +51,20 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct TaskCell: View {
-    let task: Task
+    @ObservedObject var taskCellViewModel: TaskCellViewModel
+    var onCommit: (Task) -> (Void) = {_ in}
+    
     var body: some View {
         HStack{
-            Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
+            Image(systemName: taskCellViewModel.task.completed ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: 20, height: 20)
-            Text(task.title)
+                .onTapGesture {
+                    self.taskCellViewModel.task.completed.toggle()
+            }
+            TextField("Enter the task title", text: $taskCellViewModel.task.title, onCommit: {
+                self.onCommit(self.taskCellViewModel.task)
+            })
         }// End of HStack
     }
 }
