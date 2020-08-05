@@ -8,5 +8,7 @@ target 'Taskie' do
   # Pods for Taskie
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
 
 end

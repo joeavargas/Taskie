@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				EEC8896C16190BB99A9A73F0 /* Pods-Taskie.debug.xcconfig */,
 				3842FF6E7C055A30D7764AC5 /* Pods-Taskie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
