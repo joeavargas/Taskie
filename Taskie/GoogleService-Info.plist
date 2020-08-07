@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>682468468792-ds4qnnut2vekph1flsej9650nce3544j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.682468468792-ds4qnnut2vekph1flsej9650nce3544j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCLDBenUfbq_0sPQx3XudtMxsFxh5J8kG0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>682468468792</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Joe-Vargas.Taskie</string>
+	<key>PROJECT_ID</key>
+	<string>taskie-cd2dd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taskie-cd2dd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:682468468792:ios:14dc3f59f104f56598decd</string>
+	<key>DATABASE_URL</key>
+	<string>https://taskie-cd2dd.firebaseio.com</string>
+</dict>
+</plist>
